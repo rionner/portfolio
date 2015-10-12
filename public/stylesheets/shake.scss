@@ -1,0 +1,54 @@
+/* SASS VARIABLES */
+$font-1: 'Righteous', sans-serif;
+$font-2: 'Montserrat', sans-serif;
+$font-3: 'Questrial', sans-serif;
+$off-white: rgb(240, 240, 240);
+$green: rgba(81, 203, 32, .9);
+$grey: rgb(150, 150, 150);
+$red: rgb(255, 0, 0);
+
+/* SHAKE-IT-SPEARE STYLES */
+
+.shake-it {
+  width: 70%;
+  margin: 0 auto 150px;
+
+  #loading, #loaded {
+    display: block;
+    height: 250px;
+    margin: 0 auto;
+    padding: 20px 0 0;
+
+    img {
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .sentence {
+      text-align: center;
+      color: $red;
+    }
+  }
+
+  #rewrite {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    border: 0;
+    color: $off-white;
+    background-color: $red;
+    font-family: $font-2;
+    font-size: 20px;
+  }
+
+  #rewrite:hover {
+    color: $red;
+    background-color: $off-white;
+  }
+}
+
+
+
+

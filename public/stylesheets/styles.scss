@@ -1,0 +1,185 @@
+/* SASS VARIABLES */
+$font-1: 'Righteous', sans-serif;
+$font-2: 'Montserrat', sans-serif;
+$font-3: 'Questrial', sans-serif;
+$off-white: rgb(250, 250, 250);
+$green: rgba(81, 203, 32, .9);
+$grey: rgb(193, 191, 193);
+
+/* BROWSER  RESETS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  margin: 40px auto -100px;
+}
+
+/* NAVIGATION */
+.nav-bar {
+  width: 100%;
+  height: 40px;
+  margin: -40px 0 0;
+  position: fixed;
+  background-color: $green;
+
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    float: left;
+
+    p {
+      font-family: $font-1;
+      font-size: 47px;
+      text-align: center;
+      line-height: 47px;
+      color: $off-white;
+    }
+  }
+
+  .nav-list {
+    float: right;
+
+    a {
+      line-height: 40px;
+
+      li {
+        display: inline;
+        height: 40px;
+        padding: 10px 25px;
+        list-style: none;
+        text-align: center;
+        font-family: $font-3;
+        font-size: 20px;
+        color: $off-white;
+      }
+
+      li:hover {
+        transition: 0.5s;
+        color: $green;
+        background-color: $off-white;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $off-white;
+
+  a {
+    text-decoration: none;
+    color: $off-white;
+  }
+
+  .email-phone, .address, .icons {
+    width: 30%;
+
+    p {
+      margin: 0 20px;
+      padding: 0;
+      color: $green;
+    }
+
+    a {
+      color: $green;
+    }
+
+    a:hover {
+      color: $grey;
+    }
+
+    i {
+      padding: 0 10%;
+      color: $green;
+    }
+
+    i:hover {
+      color: $grey;
+    }
+  }
+
+  .thanks {
+    width: 10%;
+    height: 100%;
+    background-color: $green;
+
+    p {
+      font-family: $font-1;
+      font-size: 20px;
+      text-align: center;
+      line-height: 20px;
+      padding: 40px 20px;
+      color: $off-white;
+    }
+  }
+}
+
+/* TEXT */
+h1, h2, h3 {
+  font-family: $font-1;
+}
+
+h4, h5, h6 {
+  font-family: $font-2;
+}
+
+p {
+  font-family: $font-3;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 800px) {
+
+/* FOOTER */
+  footer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .email-phone, .address {
+      width: 80%;
+
+      p {
+        padding: 10px 0;
+        font-size: 18px;
+      }
+    }
+
+    .icons {
+      width: 10%;
+      height: 100%;
+
+      i {
+        margin: 9px 0;
+      }
+    }
+
+    .thanks {
+      width: 10%;
+
+      p {
+        transform: rotate(270deg);
+        margin: 50px 0;
+      }
+    }
+  }
+}
+

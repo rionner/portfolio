@@ -1,0 +1,91 @@
+/* SASS VARIABLES */
+$font-1: 'Righteous', sans-serif;
+$font-2: 'Montserrat', sans-serif;
+$font-3: 'Questrial', sans-serif;
+$off-white: rgb(240, 240, 240);
+$green: rgba(81, 203, 32, .9);
+$grey: rgb(150, 150, 150);
+
+
+/* INDEX PAGE STYLES */
+
+.intro {
+  width: 100%;
+  margin: 0 auto -100px;
+
+  .quote{
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 150px;
+      padding: 10% 0;
+      color: $off-white;
+    }
+
+    p {
+      float: right;
+      color: $grey;
+    }
+  }
+
+  .portfolio {
+    margin: 0 0 50px;
+    padding: 50px 0 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    h1 {
+      width: 100%;
+      font-size: 50px;
+      color: $off-white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .portie-item {
+      margin: 2%;
+      width: 300px;
+      height: 150px;
+      /*background-color: $off-white;*/
+
+      h2 {
+        color: $green;
+      }
+
+      p {
+        padding: 5% 3%;
+        color: $grey;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: $font-2;
+        padding: 0 3%;
+        font-size: 16px;
+        color: $green;
+      }
+
+      a:hover {
+        color: $grey;
+      }
+    }
+  }
+}
+
+.triangle-topright {
+  width: 0;
+  height: 0;
+  float: right;
+  border-top: 30px solid $green;
+  border-left: 30px solid transparent;
+}
+
+@media only screen and (max-width: 800px) {
+
+}
+
+

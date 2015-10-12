@@ -1,0 +1,95 @@
+<%= erb(:_port_nav, :layout => true) %>
+
+<section class="main">
+
+  <h1>restaurant</h1>
+
+  <article class="primary-image">
+    <img src="http://i.imgur.com/pVYhWoq.png">
+  </article>
+
+  <article class="description">
+    <h4>The concept</h4>
+    <p>
+      A POS system for a restuarant.
+    </p>
+    <h4>The result (v1.0)</h4>
+    <p>
+      Employees are able to add order items to a table and managers are able to add menu items.
+    </p>
+    <h4><a href="https://github.com/rionner/RESTaurant">Project Repository</a></h4>
+    <h4>Tech</h4>
+    <p>
+      * Ruby / Sinatra</br>
+      * HTML5</br>
+      * CSS</br>
+      * Javascript / jQuery</br>
+      * Backbone.js</br>
+      * Underscore.js</br>
+      * Postgresql
+    </p>
+  </article>
+
+  <article class="gif">
+    <img src="http://i.imgur.com/dJc1Ms9.gif">
+  </article>
+
+  <article class="code-snippets">
+    <h4>Snippets</h4>
+    <pre class="prettyprint">
+
+  // namespace
+  var app = app || {};
+
+  // create a backbone view
+  app.PartyView = Backbone.View.extend({
+      initialize: function(){
+      // listen to model changes, re-render if changed
+      this.listenTo(this.model, 'change', this.render);
+      // listen to model deletions, remove model
+      this.listenTo(this.model, 'delete', this.remove);
+    },
+
+    // underscore template
+    template: _.template('&lt;h4>Table: &lt;%= table_num %&gt;&lt;/h4&gt;&lt;button class="select-party">Select&lt;/button&gt;'),
+    tagName: 'li',
+    className: 'party',
+    render: function(){
+      this.$el.html( this.template( this.model.attributes ) );
+      this.renderFoodList();
+      return this;
+    },
+
+    renderFoodList: function(){
+    // assume foods are included in the Party
+      if (this.model.attributes.foods) {
+        var foods = this.model.get('foods');
+        var foodList = $('&lt;ul&gt;');
+        for (var i = 0; i &lt; foods.length; i++) {
+          foodList.append( $('&lt;li&gt;').text( foods[i]['name'] ) );
+        }
+        this.$el.append(foodList);
+      }
+
+    },
+
+    events:{
+      'click .select-party': 'selectParty'
+    },
+
+    selectParty: function() {
+      // on click, remove existing instance of 'party-selected' class
+      $('.party-selected').removeClass('party-selected');
+      // add 'party-selected' class to clicked element
+      this.$el.addClass('party-selected');
+      app.partySelection = this.model;
+    }
+  });
+
+    </pre>
+    <p>
+      Dynamic backbone view for selecting and rendering a table and all food orders associated with that table.
+    </p>
+  </article>
+
+</section>

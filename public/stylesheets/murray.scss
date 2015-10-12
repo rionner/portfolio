@@ -1,0 +1,40 @@
+/* SASS VARIABLES */
+$font-1: 'Righteous', sans-serif;
+$font-2: 'Montserrat', sans-serif;
+$font-3: 'Questrial', sans-serif;
+$off-white: rgb(240, 240, 240);
+$green: rgba(81, 203, 32, .9);
+$grey: rgb(150, 150, 150);
+
+/* MURRAY INSPO STYLES */
+
+.fill {
+  position: relative;
+  z-index: -1;
+
+  img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  h3, h4 {
+    color: rgb(255, 255, 255);
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+}
+
+.fill:last-child {
+  padding: 0 0 200px;
+}
+

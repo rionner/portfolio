@@ -1,0 +1,87 @@
+<%= erb(:_port_nav, :layout => true) %>
+
+<section class="main">
+
+  <h1>original six</h1>
+
+  <article class="primary-image">
+    <img src="http://i.imgur.com/Q5j1IJz.png?1">
+  </article>
+
+  <article class="description">
+    <h4>The concept</h4>
+    <p>
+      Present visual comparisons of the original six NHL team data.
+    </p>
+    <h4>The result (v1.0)</h4>
+    <p>
+      Initial implementation of d3 visualizations for each team. Specifically Wins/Losses and goals scored For/Against from 1997-2015.
+    </p>
+    <h4>Tech</h4>
+    <p>
+      * Node.js</br>
+      * Express.js</br>
+      * HTML5</br>
+      * LESS / CSS</br>
+      * Javascript / jQuery</br>
+      * d3.js</br>
+      * Nokogiri - NHL data scrape</br>
+      * MongoDB</br>
+      * Custom API</br>
+    </p>
+    <h4><a href="https://github.com/rionner/Original-Six" target="blank">Project Repository</a></h4>
+  </article>
+
+  <article class="gif">
+    <img src="http://i.imgur.com/aVekF0v.gif?1">
+  </article>
+
+  <article class="code-snippets">
+    <h4>Snippets</h4>
+    <pre class="prettyprint">
+
+  function plotWinsLosses(data){
+    var n = 2; // number of layers
+    var m = 18; // number of samples per layer
+    var stack = d3.layout.stack();
+
+    // stack bars for total games played
+    var wins = data.map(function(d, i) {
+      if (!d.playoffs) {
+        var year = parseInt(d.year.substr(0, 4));
+        return { x: year-1997, y: d.wins, y0: d.losses };
+      } else {
+        return null;
+      }
+    }).filter(function(n){return n;});
+
+    // display wins and losses as individual bars
+    var losses = data.map(function(d, i) {
+      var year = parseInt(d.year.substr(0, 4));
+      if (!d.playoffs) {
+        return { x: year-1997, y: d.losses, y0: 0 };
+      } else {
+        return null;
+      }
+    }).filter(function(n) { return n; });
+
+    var layers=[wins, losses];
+
+    var yGroupMax = d3.max(layers, function(layer) {
+      return d3.max(layer, function(d) { return d.y; });
+    });
+
+    var yStackMax = d3.max(layers, function(layer) {
+      return d3.max(layer, function(d) { return d.y0 + d.y; });
+    });
+
+    // etc.
+  };
+
+    </pre>
+    <p>
+      Start of the plotWinsLosses() function to render the Wins/Losses graph in d3.
+    </p>
+  </article>
+
+</section>
