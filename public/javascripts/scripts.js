@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 
+  // INDEX SCRIPTS
   var height = $(window).height();
   $('.quote').height(height);
   $('.fill').height(height);
@@ -56,6 +57,20 @@ $(document).ready(function(){
 
   $(".this").mouseover(function(){
     $(".this-info").fadeIn(300, 'linear');
+  });
+
+  // SHAKE-IT-SPEARE SCRIPTS
+  $("#loaded").hide();
+  $("#rewrite").on("click", function(){
+    $("#loaded").show();
+    $("#loading").hide();
+    $.ajax({
+      method: "get",
+      url: "http://shakeitspeare.com/api/sentence",
+      success: function(data){
+        $(".sentence").text(data.sentence);
+      }
+    })
   });
 
 })
