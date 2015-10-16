@@ -16,6 +16,8 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     builder (3.2.2)
+    dotenv (2.0.2)
+    flickraw (0.9.8)
     i18n (0.7.0)
     json (1.8.2)
     minitest (5.7.0)
@@ -39,6 +41,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv (~> 2.0.2)
+  flickraw (~> 0.9.8)
   sass
   sinatra
   sinatra-activerecord
