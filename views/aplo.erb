@@ -43,7 +43,7 @@
 // Route to join or leave an agency via unique code or link
 app.route('/dash/agencies/join/:id/?')
 
-  // GET /dash/agencies/find/:id
+  // GET
   // Find agency by id
   .get(function(req, res, next) {
    var agencyId = hashids.decode(req.params.id)[0];
@@ -60,7 +60,7 @@ app.route('/dash/agencies/join/:id/?')
       .catch(function(err) { return next(new Error(err)); });
   })
 
-  // POST /dash/agencies/join/:id
+  // POST
   // Join an agency
   .post(function(req, res, next) {
     Promise.try(function() {
@@ -105,7 +105,7 @@ app.route('/dash/agencies/join/:id/?')
     });
   })
 
-  // DELETE /dash/agencies/join/:id
+  // DELETE
   // Leave an agency
   .delete(function(req, res, next) {
     models.AgencyProducer.where({agency_id: hashids.decode(req.params.id)[0], user_id: req.session.userid}).fetch({require: true})
