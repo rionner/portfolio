@@ -1,0 +1,129 @@
+<%= erb(:_port_nav, :layout => true) %>
+
+<section class="main">
+
+  <h1>aplo</h1>
+
+  <article class="primary-image">
+    <img src="http://i.imgur.com/VooH37n.png">
+  </article>
+
+  <article class="description">
+    <h4>The concept</h4>
+    <p>
+      A health insurance technology company focused on building the best producer and agency tools on the market. Bringing a technologically antiquated industry into 2015.
+    </p>
+    <h4>The result (v1.0)</h4>
+    <p>
+
+    </p>
+    <h4>Tech</h4>
+    <p>
+      * MongoDB</br>
+      * Postgresql</br>
+      * Node</br>
+      * Express</br>
+      * Bookshelf</br>
+      * Lo-Dash</br>
+      * HTML5</br>
+      * Less / CSS</br>
+      * Javascript / jQuery</br>
+    </p>
+  </article>
+
+  <article class="gif">
+    <img src="http://i.imgur.com/VbPTYWe.gif">
+  </article>
+
+
+  <article class="code-snippets">
+    <h4>Snippets</h4>
+    <pre class="prettyprint">
+
+// Route to join or leave an agency via unique code or link
+app.route('/dash/agencies/join/:id/?')
+
+  // GET /dash/agencies/find/:id
+  // Find agency by id
+  .get(function(req, res, next) {
+   var agencyId = hashids.decode(req.params.id)[0];
+    models.Agency.where({id: agencyId}).fetch()
+      .then(function(agency) {
+        res.render('agencies/join-view', {
+          layout: 'agencies',
+          seo: config.seo.global,
+          page: config.seo.agencies.view,
+          csrfToken: req.csrfToken(),
+          agency: agency.toJSON()
+        });
+      })
+      .catch(function(err) { return next(new Error(err)); });
+  })
+
+  // POST /dash/agencies/join/:id
+  // Join an agency
+  .post(function(req, res, next) {
+    Promise.try(function() {
+      if (req.xhr) {
+        var joinCode = hashids.decode(req.body.code)[0];
+        return models.Agency.where({code: joinCode}).fetch({require: true});
+      } else {
+        var agencyId = req.params.id;
+        return models.Agency.where({id: agencyId}).fetch({require: true});
+      }
+    })
+    .then(function(agency) {
+      new models.AgencyProducer({user_id: req.session.userid, agency_id: agency.id}).save();
+      if (req.xhr) {
+        res.json({status: 'ok', message: 'Success!'});
+      } else {
+        model.Agency.where({agency_id: Agency.id}).fetch()
+          .then(function(agency){
+            res.render('agencies/view', {
+              layout: 'agencies',
+              seo: config.seo.global,
+              page: config.seo.agencies.view,
+              csrfToken: req.csrfToken(),
+              agency: agency.toJSON(),
+            });
+          })
+          .catch(function(err) {
+            return next(new Error(err));
+          });
+      }
+    })
+    .catch(function(err) {
+      if (req.xhr) {
+        res.json({status: 'error', message: 'could not join agency'});
+      } else {
+        res.render('agencies/index', {
+          layout: 'agencies',
+          seo: config.seo.agencies.index,
+          csrfToken: req.csrfToken(),
+        });
+      }
+    });
+  })
+
+  // DELETE /dash/agencies/join/:id
+  // Leave an agency
+  .delete(function(req, res, next) {
+    models.AgencyProducer.where({agency_id: hashids.decode(req.params.id)[0], user_id: req.session.userid}).fetch({require: true})
+    .then(function(userAgency){
+      return userAgency.destroy();
+    })
+    .then(function(result) {
+      res.json({status: 'ok', message: 'You have been removed from this agency.'});
+    })
+    .catch(function(err) {
+      logger.error(err);
+      res.json({status: 'error', message: 'We could not remove you from this agency as requested.'});
+    });
+  });
+    </pre>
+    <p>
+      Get, Post, and Delete methods for an agent to find, join, and leave an agency.
+    </p>
+  </article>
+
+</section>

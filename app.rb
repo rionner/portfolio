@@ -11,6 +11,10 @@ get '/' do
   erb :index
 end
 
+get '/aplo' do
+  erb :aplo
+end
+
 get '/resume' do
   erb :resume
 end
