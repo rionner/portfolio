@@ -17,7 +17,7 @@
     <p>
       A two player melee where each player taps a specified key ('A' or 'L' respectively) or their character's image (for touch devices) to attack their opponent to elimination.
     </p>
-    <h4><a href="https://github.com/WDI-Woodstock-Schroeder/MarvelTapIt" target="blank">Project Repository</a></h4>
+    <h4><a href="https://github.com/WDI-Woodstock-Schroeder/MarvelTapIt" target="blank">Project Repository</a> | <a href="http://marveltapit.herokuapp.com/" target="_blank">View Live Site</a></h4>
     <h4>Tech</h4>
     <p>
       * Ruby on Rails</br>
@@ -37,39 +37,58 @@
     <h4>Snippets</h4>
     <pre class="prettyprint">
 
-  success: function(data){
+var app = app || {};
 
-    $('.hero-thumb').hide(500)
-    $('.selected-hero').show(500)
+app.heroClick = function heroClickHandler(){
 
-    // grab name and description data from api
-    hname = data.data.results[0].name;
-    hdescription = data.data.results[0].description;
+  $(".hero-thumb").on('click', function() {
 
-    // add key value pairs to hero object
-    hero.name = hname;
-    hero.description = hdescription;
-    hero.health = 100;
+    // remove any elements on the page with class of 'hero'
+    $('.hero').remove();
 
-    // create new img element with class 'hero'
-    var img = document.createElement('img');
-    img.src = filename;
-    img.className = 'hero';
+    var char = $(this).data("character");
+    var filename = $(this).data("filename");
+    var hero = {};
 
-    // prepend new img element to 'selected-hero' element
-    $('.selected-hero').prepend(img);
-    app.renderHero();
-    app.reselectHero();
+    $.ajax({
+      method: 'get',
+      url: 'http://gateway.marvel.com:80/v1/public/characters/' + char + '?apikey=' + key,
+      dataType: 'json',
+      success: function(data){
 
-    // if hero and nemesis elements exist, show play button
-    if ($('.nemesis').length && $('.hero').length) {
-      app.playGame();
-    }
-    else {
-      $('.play').hide();
-    };
+        $(".hero-thumb").hide(500);
+        $(".selected-hero").show(500);
 
-  }
+        // grab and assign name and description data from api
+        hname = data.data.results[0].name;
+        hdescription = data.data.results[0].description;
+
+        // add key value pairs to hero object variable
+        hero.name = hname;
+        hero.description = hdescription;
+        hero.health = 100;
+
+        // create new img element with class 'hero'
+        var img = document.createElement('img');
+        img.src = filename;
+        img.className = "hero";
+
+        // prepend new image to class 'selected-hero'
+        $('.selected-hero').prepend(img);
+        app.renderHero();
+        app.reselectHero();
+
+        // if hero and nemesis exist, show play button
+        if ($(".nemesis").length && $(".hero").length) {
+          app.playGame();
+        }
+        else {
+          $(".play").hide();
+        }
+      }
+    });
+  });
+};
 
     </pre>
     <p>
