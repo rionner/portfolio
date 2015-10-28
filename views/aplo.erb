@@ -1,14 +1,14 @@
 <%= erb(:_port_nav, :layout => true) %>
 
-<section class="main">
+<main>
 
   <h1>aplo</h1>
 
-  <article class="primary-image">
+  <section class="primary-image">
     <img src="http://i.imgur.com/VooH37n.png">
-  </article>
+  </section>
 
-  <article class="description">
+  <section class="description">
     <h4>The concept</h4>
     <p>
       A health insurance technology company focused on building the best agency tools on the market, and bringing a technologically antiquated industry into 2015.
@@ -26,35 +26,35 @@
       * Less / CSS</br>
       * Javascript / jQuery</br>
     </p>
-  </article>
+  </section>
 
-  <article class="gif">
+  <section class="gif">
     <img src="http://i.imgur.com/VbPTYWe.gif">
-  </article>
+  </section>
 
 
-  <article class="code-snippets">
+  <section class="code-snippets">
     <h4>Snippets</h4>
     <pre class="prettyprint">
 
-// Route to join or leave an agency via unique code or link
-app.route('/dash/agencies/join/:id/?')
+  // Route to join or leave an agency via unique code or link
+  app.route('/dash/agencies/join/:id/?')
 
   // GET
   // Find agency by id
   .get(function(req, res, next) {
-   var agencyId = hashids.decode(req.params.id)[0];
+    var agencyId = hashids.decode(req.params.id)[0];
     models.Agency.where({id: agencyId}).fetch()
-      .then(function(agency) {
-        res.render('agencies/join-view', {
-          layout: 'agencies',
-          seo: config.seo.global,
-          page: config.seo.agencies.view,
-          csrfToken: req.csrfToken(),
-          agency: agency.toJSON()
-        });
-      })
-      .catch(function(err) { return next(new Error(err)); });
+    .then(function(agency) {
+      res.render('agencies/join-view', {
+        layout: 'agencies',
+        seo: config.seo.global,
+        page: config.seo.agencies.view,
+        csrfToken: req.csrfToken(),
+        agency: agency.toJSON()
+      });
+    })
+    .catch(function(err) { return next(new Error(err)); });
   })
 
   // POST
@@ -121,6 +121,6 @@ app.route('/dash/agencies/join/:id/?')
     <p>
       Get, Post, and Delete methods for an agent to find, join, and leave an agency.
     </p>
-  </article>
+  </section>
 
-</section>
+</main>

@@ -37,7 +37,7 @@
 }
 
 /* GENERAL DETAIL PAGE STYLES */
-.main {
+main {
   width: 100%;
   padding: 32px 0 100px;
 
@@ -47,7 +47,7 @@
     color: $off-white;
   }
 
-  article {
+  section {
     margin: 30px auto;
 
     img {

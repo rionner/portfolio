@@ -1,14 +1,14 @@
 <%= erb(:_port_nav, :layout => true) %>
 
-<section class="main">
+<main class="main">
 
   <h1>marvel tap-it</h1>
 
-  <article class="primary-image">
+  <section class="primary-image">
     <img src="http://i.imgur.com/zCXOTSd.png?1">
-  </article>
+  </section>
 
-  <article class="description">
+  <section class="description">
     <h4>The concept</h4>
     <p>
       Build an interactive game inspired by, and consuming, the Marvel API.
@@ -17,7 +17,7 @@
     <p>
       A two player melee where each player taps a specified key ('A' or 'L' respectively) or their character's image (for touch devices) to attack their opponent to elimination.
     </p>
-    <h4><a href="https://github.com/WDI-Woodstock-Schroeder/MarvelTapIt" target="blank">Project Repository</a> | <a href="http://marveltapit.herokuapp.com/" target="_blank">View Live Site</a></h4>
+    <h4><a href="https://github.com/WDI-Woodstock-Schroeder/MarvelTapIt" target="blank">Project Repository</a> | <a href="http://marveltapit.herokuapp.com/" target="_blank">Live Site</a></h4>
     <h4>Tech</h4>
     <p>
       * Ruby on Rails</br>
@@ -27,73 +27,73 @@
       * Marvel API</br>
       * Heroku
     </p>
-  </article>
+  </section>
 
-  <article class="gif">
+  <section class="gif">
     <img src="http://i.imgur.com/2djvVqV.gif">
-  </article>
+  </section>
 
-  <article class="code-snippets">
+  <section class="code-snippets">
     <h4>Snippets</h4>
     <pre class="prettyprint">
 
-var app = app || {};
+  var app = app || {};
 
-app.heroClick = function heroClickHandler(){
+  app.heroClick = function heroClickHandler(){
 
-  $(".hero-thumb").on('click', function() {
+    $(".hero-thumb").on('click', function() {
 
-    // remove any elements on the page with class of 'hero'
-    $('.hero').remove();
+      // remove any elements on the page with class of 'hero'
+      $('.hero').remove();
 
-    var char = $(this).data("character");
-    var filename = $(this).data("filename");
-    var hero = {};
+      var char = $(this).data("character");
+      var filename = $(this).data("filename");
+      var hero = {};
 
-    $.ajax({
-      method: 'get',
-      url: 'http://gateway.marvel.com:80/v1/public/characters/' + char + '?apikey=' + key,
-      dataType: 'json',
-      success: function(data){
+      $.ajax({
+        method: 'get',
+        url: 'http://gateway.marvel.com:80/v1/public/characters/' + char + '?apikey=' + key,
+        dataType: 'json',
+        success: function(data){
 
-        $(".hero-thumb").hide(500);
-        $(".selected-hero").show(500);
+          $(".hero-thumb").hide(500);
+          $(".selected-hero").show(500);
 
-        // grab and assign name and description data from api
-        hname = data.data.results[0].name;
-        hdescription = data.data.results[0].description;
+          // grab and assign name and description data from api
+          hname = data.data.results[0].name;
+          hdescription = data.data.results[0].description;
 
-        // add key value pairs to hero object variable
-        hero.name = hname;
-        hero.description = hdescription;
-        hero.health = 100;
+          // add key value pairs to hero object variable
+          hero.name = hname;
+          hero.description = hdescription;
+          hero.health = 100;
 
-        // create new img element with class 'hero'
-        var img = document.createElement('img');
-        img.src = filename;
-        img.className = "hero";
+          // create new img element with class 'hero'
+          var img = document.createElement('img');
+          img.src = filename;
+          img.className = "hero";
 
-        // prepend new image to class 'selected-hero'
-        $('.selected-hero').prepend(img);
-        app.renderHero();
-        app.reselectHero();
+          // prepend new image to class 'selected-hero'
+          $('.selected-hero').prepend(img);
+          app.renderHero();
+          app.reselectHero();
 
-        // if hero and nemesis exist, show play button
-        if ($(".nemesis").length && $(".hero").length) {
-          app.playGame();
+          // if hero and nemesis exist, show play button
+          if ($(".nemesis").length && $(".hero").length) {
+            app.playGame();
+          }
+          else {
+            $(".play").hide();
+          }
         }
-        else {
-          $(".play").hide();
-        }
-      }
+      });
     });
-  });
-};
+  };
 
     </pre>
     <p>
       On click function to call the Marvel API, hide unneeded elements, and render the character data retrieved in new document elements.
     </p>
-  </article>
+  </section>
 
-</section>
+</main>

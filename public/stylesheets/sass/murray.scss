@@ -6,13 +6,8 @@
 .fill {
   position: relative;
   z-index: -1;
-
-  img {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+  background: center no-repeat;
+  background-size: cover;
 
   span {
     position: absolute;

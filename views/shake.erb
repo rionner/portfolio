@@ -1,9 +1,10 @@
 <%= erb(:_port_nav, :layout => true) %>
 
-<section class="main">
+<main>
+
   <h1>shake-it-speare</h1>
 
-  <article class="description">
+  <section class="description">
     <h4>The concept</h4>
     <p>
       Consume the Shake-it-speare API, an afternoon lab at WDI.
@@ -14,22 +15,17 @@
       * CSS</br>
       * Shake-it-speare API
     </p>
-  </article>
+  </section>
 
-  </article>
-</section>
+  <section class="shake-it">
+    <button type="button" id="rewrite">What did Shakespeare say?</button>
+    <div id="loading">
+      <img src="http://i.giphy.com/yl0JCeVWTHM0E.giff"/>
+    </div>
+    <div id="loaded">
+      <h1 class="sentence"></h1>
+      <img src="http://i.giphy.com/okXsTqmNUNs52.gif">
+    </div>
+  </section>
 
-<div class="shake-it">
-
-  <button type="button" id="rewrite">What did Shakespeare say?</button>
-
-  <div id="loading">
-    <img src="http://i.giphy.com/yl0JCeVWTHM0E.giff"/>
-  </div>
-
-  <div id="loaded">
-    <h1 class="sentence"></h1>
-    <img src="http://i.giphy.com/okXsTqmNUNs52.gif">
-  </div>
-
-</div>
+</main>
