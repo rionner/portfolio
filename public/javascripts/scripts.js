@@ -2,17 +2,26 @@
 
 $(document).ready(function(){
 
-  // INDEX SCRIPTS
+  // INDEX
+  // QUOTE SCRIPTS
   var height = $(window).height();
   $('.quote').height(height);
-  $('.fill').height(height);
+  $('.fill').height(height); // MURRAY IMAGE SIZING
 
   $(window).resize(function() {
     var height = $(window).height();
     $('.quote').height(height);
-    $('.fill').height(height);
+    $('.fill').height(height); // MURRAY IMAGE SIZING
   });
 
+  $('.sartre').hide();
+  $('.sinatra').hide();
+  $('.socrates').delay(1000).fadeOut(1000);
+  $('.sartre').delay(2000).fadeIn(1500).fadeOut(1000);
+  $('.sinatra').delay(4500).fadeIn(1500);
+
+  // INDEX
+  // PORTFOLIO SCRIPTS
   $('.text').hide();
 
   $('.portie-item').mouseover(function() {
@@ -52,7 +61,7 @@ $(document).ready(function(){
   });
 
   $(".kismet").mouseover(function(){
-    $(".kismet-info").fadeIn(300, 'linear');
+    $(".kismet-info").fadeIn(300, 'linear');`
   });
 
   $(".this").mouseover(function(){
