@@ -72,7 +72,7 @@ footer {
   height: 100px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: $off-white;
 
@@ -99,13 +99,17 @@ footer {
     }
 
     i {
-      padding: 0 10%;
+      padding: 0 2%;
       color: $green;
     }
 
     i:hover {
       color: $grey;
     }
+  }
+
+  .icons {
+    text-align: center;
   }
 
   .thanks {
@@ -118,7 +122,7 @@ footer {
       font-size: 20px;
       text-align: center;
       line-height: 20px;
-      padding: 40px 20px;
+      padding: 40px 0;
       color: $off-white;
     }
   }
@@ -135,45 +139,4 @@ h4, h5, h6 {
 
 p {
   font-family: $font-3;
-}
-
-
-/* MEDIA QUERIES */
-@media screen and (max-width: 800px) {
-
-/* FOOTER */
-  footer {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    .email-phone, .address {
-      width: 80%;
-
-      p {
-        padding: 10px 0;
-        font-size: 18px;
-      }
-    }
-
-    .icons {
-      width: 10%;
-      height: 100%;
-
-      i {
-        margin: 9px 0;
-      }
-    }
-
-    .thanks {
-      width: 10%;
-
-      p {
-        transform: rotate(270deg);
-        margin: 50px 0;
-      }
-    }
-  }
 }

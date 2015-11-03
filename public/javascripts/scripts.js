@@ -61,7 +61,7 @@ $(document).ready(function(){
   });
 
   $(".kismet").mouseover(function(){
-    $(".kismet-info").fadeIn(300, 'linear');`
+    $(".kismet-info").fadeIn(300, 'linear');
   });
 
   $(".this").mouseover(function(){

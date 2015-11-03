@@ -1,6 +1,107 @@
 /* SASS VARIABLES */
 @import "variables";
 
+/* BROWSER ADJUSTMENTS */
+@media screen and (max-width: 800px) {
+
+/* FOOTER */
+  footer {
+    height: 150px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .email-phone, .address {
+      width: 75%;
+
+      p {
+        padding: 10px 0;
+        font-size: 18px;
+      }
+    }
+
+    .icons {
+      width: 15%;
+
+      i {
+        margin: 9px;
+      }
+    }
+
+    .thanks {
+      width: 10%;
+      padding: 65px 0 0 0;
+
+      p {
+        transform: rotate(270deg);
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .intro {
+    .quote {
+      h1 {
+        font-size: 130px;
+      }
+    }
+  }
+
+  footer {
+    .email-phone, .address {
+      width: 70%;
+    }
+    .icons {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .intro {
+    .quote {
+      h1 {
+        font-size: 115px;
+      }
+    }
+  }
+
+  footer {
+    flex-flow: column;
+    flex-wrap: wrap;
+    height: 200px;
+
+    .email-phone, .address, .icons {
+      width: 90%;
+
+    }
+
+    .thanks {
+      padding: 110px 0 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .nav-bar {
+    .nav-list {
+      .contact {
+        display: none;
+      }
+    }
+  }
+
+  .intro {
+    .quote {
+      h1 {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+
 /* PHONES */
 
 /* iPHONE 4 */
