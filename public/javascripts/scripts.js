@@ -1,5 +1,3 @@
-// LAYOUT AND INDEX SCRIPTS
-
 $(document).ready(function(){
 
   // INDEX

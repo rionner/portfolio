@@ -2,5 +2,21 @@
 
 <main class="main">
   <h1>photography</h1>
-	<h1>coming soon</h1>
+
+	<script type="text/javascript">
+	  var photoset = <%= @photoset.to_json %>
+
+	  var photoIds = [];
+
+	  for (var i = 0; i < photoset.photo.length; i++) {
+	  	var id = photoset.photo[i].id
+	  	photoIds.push(id);
+	  }
+
+	  // photoset.photo.map(function() {
+	  // 	console.log('photo id: ' + photoset.photo[i].id );
+	  // })
+
+	</script>
+
 </main>
