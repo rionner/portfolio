@@ -7,7 +7,13 @@ class PhotoController < Sinatra::Application
   end
 
   get '/' do
-    @photoset = flickr.photosets.getPhotos :photoset_id => ENV["FLICKR_PORTFOLIO"], :user_id => ENV["FLICKR_USER_ID"], :format => "json"
+    @photoset = flickr.photosets.getPhotos :photoset_id => ENV["FLICKR_PORTFOLIO"], :user_id => ENV["FLICKR_USER_ID"], :format => 'json'
+
+    @all_photos = @photoset['photo']
+    @photos = []
+    @all_photos.map { | photo | @photos << photo['id'] }
+    puts @photos
+
     erb :photography
   end
 
