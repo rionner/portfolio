@@ -1,14 +1,13 @@
 $(document).ready(function(){
 
   // INDEX
-  // QUOTE SCRIPTS
   var height = $(window).height();
-  $('.quote').height(height);
+  $('.quote').height(height); // INDEX QUOTE
   $('.fill').height(height); // MURRAY IMAGE SIZING
 
   $(window).resize(function() {
     var height = $(window).height();
-    $('.quote').height(height);
+    $('.quote').height(height); // INDEX QUOTE
     $('.fill').height(height); // MURRAY IMAGE SIZING
   });
 

@@ -1,0 +1,18 @@
+/* SASS VARIABLES */
+@import "variables";
+
+/* PHOTOGRAPHY STYLES */
+.gallery {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  .photo {
+    width: 250px;
+    height: 250px;
+    margin: 1%;
+    background: center no-repeat;
+    background-size: cover;
+  }
+}

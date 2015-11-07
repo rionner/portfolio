@@ -11,8 +11,7 @@ class PhotoController < Sinatra::Application
 
     @all_photos = @photoset['photo']
     @photos = []
-    @all_photos.map { | photo | @photos << photo['id'] }
-    puts @photos
+    @all_photos.map { | photo | @photos << "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_q.jpg" }
 
     erb :photography
   end

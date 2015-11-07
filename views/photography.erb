@@ -3,13 +3,19 @@
 <main class="main">
   <h1>photography</h1>
 
-	<script type="text/javascript">
-	  // var photoIds = <%= @photo_ids.to_json %>
-
-	  // console.log(photoIds);
-
-
-
-	</script>
+  <section class="gallery"></section>
 
 </main>
+
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		var photos = <%= @photos.to_json %>
+
+	  for (i in photos) {
+	  	$('.gallery').append('<article class="photo" style="background-image: url(' + photos[i] + ')"></article>');
+	  }
+	})
+
+</script>
