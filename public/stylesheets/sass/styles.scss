@@ -36,7 +36,7 @@ html, body {
       font-size: 47px;
       text-align: center;
       line-height: 47px;
-      color: $off-white;
+      color: white;
     }
   }
 
@@ -54,13 +54,13 @@ html, body {
         text-align: center;
         font-family: $font-3;
         font-size: 20px;
-        color: $off-white;
+        color: white;
       }
 
       li:hover {
         transition: 0.5s;
         color: $green;
-        background-color: $off-white;
+        background-color: white;
       }
     }
   }
@@ -74,11 +74,11 @@ footer {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
-  background-color: $off-white;
+  border-top: solid 2px $grey;
+  background-color: $white;
 
   a {
     text-decoration: none;
-    color: $off-white;
   }
 
   .email-phone, .address, .icons {
@@ -91,11 +91,11 @@ footer {
     }
 
     a {
-      color: $grey;
+      color: $green;
     }
 
     a:hover {
-      color: $teal;
+      color: $grey;
     }
 
     i {
@@ -104,7 +104,7 @@ footer {
     }
 
     i:hover {
-      color: $teal;
+      color: $green;
     }
   }
 
@@ -115,7 +115,7 @@ footer {
   .thanks {
     width: 10%;
     height: 100%;
-    background-color: $teal;
+    background-color: $green;
 
     p {
       font-family: $font-1;
@@ -123,7 +123,7 @@ footer {
       text-align: center;
       line-height: 20px;
       padding: 40px 0;
-      color: $off-white;
+      color: $white;
     }
   }
 }

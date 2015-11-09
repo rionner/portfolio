@@ -54,6 +54,8 @@
       margin: 2%;
       width: 300px;
       height: 150px;
+      border-bottom: solid 2px $grey;
+      border-right: solid 2px $grey;
 
       h2 {
         color: $grey;

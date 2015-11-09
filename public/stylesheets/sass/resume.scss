@@ -52,12 +52,13 @@
 
     p {
       padding: 1% 5%;
-      line-height: 1.2em;
+      line-height: 1.3em;
       color: $grey;
 
       .emph{
+        font-size: 1.1em;
         font-weight: bold;
-        color: $teal;
+        color: $grey;
       }
     }
 

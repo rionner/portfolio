@@ -29,41 +29,7 @@ $(document).ready(function(){
     $('.triangle-topright').remove();
   });
 
-  $(".aplo-quote").mouseover(function(){
-    $(".aplo-quote-info").fadeIn(300, 'linear');
-  });
-
-  $(".original-six").mouseover(function(){
-    $(".original-six-info").fadeIn(300, 'linear');
-  });
-
-  $(".marvel").mouseover(function(){
-    $(".marvel-info").fadeIn(300, 'linear');
-  });
-
-  $(".restaurant").mouseover(function(){
-    $(".restaurant-info").fadeIn(300, 'linear');
-  });
-
-  $(".murray").mouseover(function(){
-    $(".murray-info").fadeIn(300, 'linear');
-  });
-
-  $(".shake-it").mouseover(function(){
-    $(".shake-it-info").fadeIn(300, 'linear');
-  });
-
-  $(".photography").mouseover(function(){
-    $(".photography-info").fadeIn(300, 'linear');
-  });
-
-  $(".kismet").mouseover(function(){
-    $(".kismet-info").fadeIn(300, 'linear');
-  });
-
-  $(".this").mouseover(function(){
-    $(".this-info").fadeIn(300, 'linear');
-  });
+  $(".text").fadeIn(600, 'linear');
 
   // SHAKE-IT-SPEARE SCRIPTS
   $("#loaded").hide();
