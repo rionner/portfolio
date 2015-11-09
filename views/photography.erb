@@ -4,6 +4,7 @@
   <h1>photography</h1>
 
   <section class="gallery"></section>
+  <article class="photo-box"></article>
 
 </main>
 
@@ -14,8 +15,14 @@
 		var photos = <%= @photos.to_json %>
 
 	  for (i in photos) {
-	  	$('.gallery').append('<article class="photo" style="background-image: url(' + photos[i] + ')"></article>');
+	  	$('.gallery').append('<article data-large="' + photos[i][0]['large'] + '" class="photo" style="background-image: url(' + photos[i][0]['small'] + ')"></article>');
 	  }
+
+  	$('.photo').mouseover(function() {
+  		var large = $(this).data('large');
+  		$('.photo-box').css('background-image', 'url(' + large + ')');
+  	})
+
 	})
 
 </script>
