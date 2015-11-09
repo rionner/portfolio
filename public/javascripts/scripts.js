@@ -4,11 +4,13 @@ $(document).ready(function(){
   var height = $(window).height();
   $('.quote').height(height); // INDEX QUOTE
   $('.fill').height(height); // MURRAY IMAGE SIZING
+  $('.photo-box').height(height); // PHOTOGRAPHY IMAGE SIZING
 
   $(window).resize(function() {
     var height = $(window).height();
     $('.quote').height(height); // INDEX QUOTE
     $('.fill').height(height); // MURRAY IMAGE SIZING
+    $('.photo-box').height(height); // PHOTOGRAPHY IMAGE SIZING
   });
 
   $('.sartre').hide();

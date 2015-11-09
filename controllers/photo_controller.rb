@@ -10,8 +10,10 @@ class PhotoController < Sinatra::Application
     @photoset = flickr.photosets.getPhotos :photoset_id => ENV["FLICKR_PORTFOLIO"], :user_id => ENV["FLICKR_USER_ID"], :format => 'json'
 
     @all_photos = @photoset['photo']
+
     @photos = []
-    @all_photos.map { | photo | @photos << "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_m.jpg" }
+
+    @all_photos.map { | photo | @photos << ( 'small' => "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_m.jpg", 'large' => "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_c.jpg"] ) }
 
     erb :photography
   end
