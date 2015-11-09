@@ -13,7 +13,7 @@ class PhotoController < Sinatra::Application
 
     @photos = []
 
-    @all_photos.map { | photo | @photos << ( 'small' => "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_m.jpg", 'large' => "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_c.jpg"] ) }
+    @all_photos.map { | photo | @photos << ( ['small' => "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_m.jpg", 'large' => "https://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}_c.jpg"] ) }
 
     erb :photography
   end
