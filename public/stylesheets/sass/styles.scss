@@ -87,24 +87,24 @@ footer {
     p {
       margin: 0 20px;
       padding: 0;
-      color: $green;
+      color: $grey;
     }
 
     a {
-      color: $green;
+      color: $grey;
     }
 
     a:hover {
-      color: $grey;
+      color: $teal;
     }
 
     i {
       padding: 0 2%;
-      color: $green;
+      color: $grey;
     }
 
     i:hover {
-      color: $grey;
+      color: $teal;
     }
   }
 
@@ -115,7 +115,7 @@ footer {
   .thanks {
     width: 10%;
     height: 100%;
-    background-color: $green;
+    background-color: $teal;
 
     p {
       font-family: $font-1;

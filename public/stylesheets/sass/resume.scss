@@ -52,11 +52,22 @@
 
     p {
       padding: 1% 5%;
+      line-height: 1.2em;
       color: $grey;
 
       .emph{
-        color: $green;
+        font-weight: bold;
+        color: $teal;
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: $green;
+    }
+
+    a:hover {
+      color: $grey;
     }
   }
 }
