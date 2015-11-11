@@ -76,6 +76,15 @@
 
       item.css('tr').each do |row|
 
+      # HOME vs ROAD GAME COUNT
+        home_road = row.css('td:nth-child(3)').text
+        if (home_road === 'H')
+          season[:home_games] += 1
+        elsif (home_road == 'R')
+          season[:road_games] += 1
+        end
+
+
       # GAME DECISIONS
         # win, loss, and overtime count
         win_loss = row.css('td:nth-child(4)').text
@@ -88,11 +97,14 @@
           season[:overtime] += 1
         end
 
-        # shootout count
+        # games resolved by shootout count
         shootout = row.css('td:nth-child(5)').text
         if (shootout == 'SO')
           season[:shootout] += 1
         end
+
+        # total games played
+        season[:games_played] = season[:wins].to_i + season[:losses].to_i + season[:overtime].to_i
 
 
       # GOAL TOTALS
@@ -109,13 +121,15 @@
         end
 
 
-      # HOME vs ROAD GAME COUNT
-        home_road = row.css('td:nth-child(3)').text
-        if (home_road === 'H')
-          season[:home_games] += 1
-        elsif (home_road == 'R')
-          season[:road_games] += 1
-        end
+      # GOAL AVERAGES
+        # average team goals
+        avg_goals_for = season[:team_goals].to_i / season[:games_played].to_i.to_f
+        season[:avg_goals_for] = avg_goals_for.round(2)
+
+        # average opponent goals
+        avg_goals_against = season[:opponent_goals].to_i / season[:games_played].to_i.to_f
+        season[:avg_goals_against] = avg_goals_against.round(2)
+
 
       # ATTENDANCE
         # total attendance
@@ -126,18 +140,6 @@
         if (home_road === 'H')
           season[:home_attendance] += attendance.to_i
         end
-
-        # total games played
-        season[:games_played] = season[:wins].to_i + season[:losses].to_i + season[:overtime].to_i
-
-      # GOALS
-        # average team goals
-        avg_goals_for = season[:team_goals].to_i / season[:games_played].to_i.to_f
-        season[:avg_goals_for] = avg_goals_for.round(2)
-
-        # average opponent goals
-        avg_goals_against = season[:opponent_goals].to_i / season[:games_played].to_i.to_f
-        season[:avg_goals_against] = avg_goals_against.round(2)
 
       end
     end
@@ -151,7 +153,7 @@
 
     </pre>
     <p>
-      Using the Nokogiri gem to scrape and manipulate data, then storing to a JSON document.
+      Using the Nokogiri gem to scrape NHL website table data and manipulate the results as needed, then storing all data to a JSON document.
     </p>
 
     <pre class="prettyprint">
