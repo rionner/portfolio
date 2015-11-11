@@ -43,7 +43,7 @@
 
   .tech, .experience, .education, .recommendations {
     width: 80%;
-    margin: 30px auto;
+    margin: 5% auto;
 
     h4 {
       font-size: 20px;
@@ -51,15 +51,24 @@
     }
 
     p {
-      padding: 1% 5%;
+      padding: 2% 5% 0;
       line-height: 1.3em;
       color: $grey;
 
-      .emph{
+      .emph {
         font-size: 1.1em;
         font-weight: bold;
-        color: $grey;
+        color: $green;
       }
+
+      .date {
+        float: right;
+        font-weight: light;
+      }
+    }
+
+    .rec {
+      padding: 0 7%;
     }
 
     a {
@@ -69,6 +78,15 @@
 
     a:hover {
       color: $grey;
+    }
+
+    ul {
+      padding: 0 12%;
+      color: $grey;
+
+      li {
+        font-family: $font-3;
+      }
     }
   }
 }

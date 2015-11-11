@@ -1,7 +1,18 @@
 /* SASS VARIABLES */
 @import "variables";
 
+
 /* BROWSER ADJUSTMENTS */
+@media screen and (max-width: 900px) {
+  .tech, .experience, .education, .recommendations {
+    p {
+      .date {
+        display: none;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   footer {
     height: 150px;
@@ -98,6 +109,7 @@
     }
   }
 }
+
 
 
 /* PHONES */
