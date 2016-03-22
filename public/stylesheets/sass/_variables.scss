@@ -1,11 +1,58 @@
-/* SASS VARIABLES */
-$font-1: 'Righteous', sans-serif;
-$font-2: 'Montserrat', sans-serif;
-$font-3: 'Questrial', sans-serif;
+/* ALL VARIABLES */
+/* FONTS */
+$righteous-font: 'Righteous', sans-serif;
+$montserrat-font: 'Montserrat', sans-serif;
+$questrial-font: 'Questrial', sans-serif;
+
+/* FONT SIZES */
+$size12: 12px;
+$size16: 16px;
+$size24: 24px;
+$size32: 32px;
+$size46: 46px;
+$size60: 60px;
+
+/* COLORS */
 $white: rgb(255, 255, 255);
 $off-white: rgb(240, 240, 240);
 $grey: rgb(150, 150, 150);
 $green: rgb(10, 230, 10);
 $red: rgb(245, 0, 0);
-/*$purple: rgb(185, 35, 175);*/
-/*$teal: rgb(0, 160, 160);*/
+$purple: rgb(185, 35, 175);
+$teal: rgb(0, 160, 160);
+
+/* BROWSER WIDTHS */
+$width300: 300px;
+$width500: 500px;
+$width700: 700px;
+$width900: 900px;
+$width1100: 1100px;
+$width1300: 1300px;
+
+
+/* TO USE IN SCSS */
+/* FONTS */
+$heading-font: $righteous-font;
+$bodycontent-font: montserrat-font;
+
+/* FONT SIZES */
+$ridiculous-heading-size: $size60;
+$super-heading-size: $size46;
+$large-heading-size: $size32;
+$heading-size: $size24;
+$bodycontent-size: $size16;
+$caption-size: $size12;
+
+/* COLORS */
+$primary-color: $green;
+$secondary-color: $grey;
+/*$tertiary-color: ;*/
+
+/* BROWSER WIDTHS */
+$mobile-min: $width300;
+$mobile-max: $width500;
+$tablet-min: $width700;
+$tablet-max: $width900;
+$desktop-min: $width1100;
+$desktop-max: $width1300;
+

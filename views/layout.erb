@@ -9,15 +9,8 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/stylesheets/styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/index.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/resume.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/detail.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/murray.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/shake.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/photography.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/mobile.css" media="screen" charset="utf-8">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/stylesheets/main.css" media="screen" charset="utf-8">
 
     <!-- Libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -36,41 +29,31 @@
     <meta name="keywords" content="web development,freelance developer,remote developer,HTML,CSS,JavaScript,Ruby,Node,Express,MongoDB,SQL,PostgreSQL,Marion Huebner">
     <meta name="author" content="Marion Huebner">
   </head>
-  <body>
-
-    <div id="wrapper">
-      <nav class="nav-bar">
-      <div class="logo"><a href="/"><p>MH</p></a></div>
-        <ul class="nav-list">
+  <body class="layout-page-wrap">
+    <div class="layout-content-wrap">
+    <header>
+      <a href="/"><h2>MH</h2></a>
+      <nav>
+        <ul class="layout-flex-parent">
           <a href="/#portfolio"><li>portfolio</li></a>
           <a href="/resume"><li>resume</li></a>
           <a href="#contact"><li class="contact">contact</li></a>
         </ul>
       </nav>
+    </header>
       <%= yield %>
     </div>
-
-    <footer>
+    <footer class="layout-flex-parent">
       <a name="contact"></a>
-      <div class="email-phone">
-        <p>
-          <a href="mailto:say-hi@marionhuebner.com">say-hi@marionhuebner.com</a></br><a href="tel:630-605-2962">630.605.2962</a>
-        </p>
-      </div>
-      <div class="address">
-        <p>
-          Available in Chicago, IL</br>and for remote work.
-        </p>
-      </div>
+      <p><a href="mailto:say-hi@marionhuebner.com">say-hi@marionhuebner.com</a></br><a href="tel:630-605-2962">630.605.2962</a></p>
       <div class="icons">
         <a href="https://www.linkedin.com/in/marionhuebner" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
         <a href="https://github.com/rionner" target="_blank"><i class="fa fa-github-alt fa-2x"></i></a>
         <a href="https://twitter.com/rion_ner" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
         <a href="https://angel.co/marion-huebner" target="_blank"><i class="fa fa-angellist fa-2x"></i></a>
       </div>
-      <div class="thanks">
-        <p>mahalo</p>
-      </div>
+      <p>Available in Chicago, IL</br>and for remote work.</p>
+      <h5>mahalo</h5>
     </footer>
 
   </body>

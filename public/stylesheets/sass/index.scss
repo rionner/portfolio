@@ -1,5 +1,104 @@
-/* SASS VARIABLES */
-@import "variables";
+
+
+/* NAVIGATION */
+.nav-bar {
+  width: 100%;
+  height: 40px;
+  margin: -40px 0 0;
+  position: fixed;
+  background-color: $green;
+
+  .logo {
+    float: left;
+
+    p {
+      font-size: 47px;
+      text-align: center;
+      line-height: 47px;
+      color: white;
+    }
+  }
+
+  .nav-list {
+    float: right;
+
+    a {
+      line-height: 40px;
+
+      li {
+        display: inline;
+        height: 40px;
+        padding: 10px 25px;
+        list-style: none;
+        text-align: center;
+        color: white;
+      }
+
+      li:hover {
+        transition: 0.5s;
+        color: $green;
+        background-color: white;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-top: solid 2px $grey;
+  background-color: $white;
+
+  .email-phone, .address, .icons {
+    width: 30%;
+
+    p {
+      margin: 0 20px;
+      padding: 0;
+      color: $grey;
+    }
+
+    a {
+      color: $green;
+    }
+
+    a:hover {
+      color: $grey;
+    }
+
+    i {
+      padding: 0 2%;
+      color: $grey;
+    }
+
+    i:hover {
+      color: $green;
+    }
+  }
+
+  .icons {
+    text-align: center;
+  }
+
+  .thanks {
+    width: 10%;
+    height: 100%;
+    background-color: $green;
+
+    p {
+      text-align: center;
+      line-height: 20px;
+      padding: 40px 0;
+      color: $white;
+    }
+  }
+}
+
 
 /* INDEX PAGE STYLES */
 .intro {
@@ -7,6 +106,7 @@
   margin: 0 auto -100px;
 
   .quote{
+    height: 100%;
     width: 80%;
     margin: 0 auto;
 
