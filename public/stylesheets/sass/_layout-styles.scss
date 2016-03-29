@@ -1,0 +1,45 @@
+/* LAYOUT */
+/* STYLE RULES */
+/* Divide the page into sections & hold one or more modules together */
+/* Naming conventions > Prefix layout mixins with 'layout-' - as in '.layout-navbar' */
+
+
+/* Keep footer at the bottom of the page */
+.layout-page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.layout-content-wrap {
+  flex: 1 0 auto;
+}
+
+
+/* Flex grid styles */
+.layout-flex-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.layout-flex-child-1col {
+  width: 90%;
+  padding: 10px auto;
+}
+
+.layout-flex-child-2col {
+  width: 45%;
+  padding: 10px 2%;
+}
+
+.layout-flex-child-3col {
+  width: 30%;
+  padding: 10px 1%;
+}
+
+.layout-flex-child-4col {
+  width: 20%;
+  padding: 10px 1%;
+}

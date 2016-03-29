@@ -3,32 +3,26 @@
 
 /* RESUME PAGE STYLES */
 .resume {
-  width: 100%;
   padding: 0 0 100px;
 
   h1 {
-    width: 100%;
     font-size: 50px;
     color: $off-white;
   }
 
   .contact-info{
-    width: 80%;
     margin: 0 auto;
     text-align: right;
 
     h1 {
-      font-size: 25px;
       color: $grey;
     }
 
     h4 {
-      font-size: 20px;
       color: $grey;
     }
 
     a {
-      text-decoration: none;
       color: $green;
     }
 
@@ -42,11 +36,7 @@
   }
 
   .tech, .experience, .education, .recommendations {
-    width: 80%;
-    margin: 5% auto;
-
     h4 {
-      font-size: 20px;
       color: $grey;
     }
 
@@ -56,8 +46,6 @@
       color: $grey;
 
       .emph {
-        font-size: 1.1em;
-        font-weight: bold;
         color: $green;
       }
 
@@ -72,7 +60,6 @@
     }
 
     a {
-      text-decoration: none;
       color: $green;
     }
 
@@ -83,10 +70,6 @@
     ul {
       padding: 0 12%;
       color: $grey;
-
-      li {
-        font-family: $font-3;
-      }
     }
   }
 }

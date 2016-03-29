@@ -1,0 +1,93 @@
+/* BASE */
+/* STYLE RULES */
+/* Default styles - exclusively element selectors, descendant selectors, child selectors, and pseudo classes. */
+/* Do not style class or id selectors */
+
+/* BROSWER RESETS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol, ul {
+  list-style: none;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  font-family: $heading-font, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+h4, h5, h6 {
+  font-family: $caption-font, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $ridiculous-heading-size;
+}
+
+h2 {
+  font-size: $super-heading-size;
+}
+
+h3 {
+  font-size: $large-heading-size;
+}
+
+h4 {
+  font-size: $heading-size;
+}
+
+h5 {
+  font-size: $bodycontent-size;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: $caption-size;
+  text-transform: uppercase;
+  color: red;
+}
+
+p, a, li, input, select, option, button {
+  font-family: $bodycontent-font, Helvetica, Arial, sans-serif;
+  font-size: $bodycontent-size;
+}
+
+p {}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: $primary-color;
+
+  &:hover {
+    transition: color 0.2s ease;
+    color: $quaternary-color;
+  }
+}
+
+

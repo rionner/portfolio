@@ -35,25 +35,32 @@
       <a href="/"><h2>MH</h2></a>
       <nav>
         <ul class="layout-flex-parent">
-          <a href="/#portfolio"><li>portfolio</li></a>
-          <a href="/resume"><li>resume</li></a>
-          <a href="#contact"><li class="contact">contact</li></a>
+          <a href="/#portfolio" class="layout-flex-child-3col"><li>portfolio</li></a>
+          <a href="/resume" class="layout-flex-child-3col"><li>resume</li></a>
+          <a href="#contact" class="layout-flex-child-3col"><li class="contact">contact</li></a>
         </ul>
       </nav>
     </header>
       <%= yield %>
     </div>
+
+    <a name="contact"></a>
     <footer class="layout-flex-parent">
-      <a name="contact"></a>
-      <p><a href="mailto:say-hi@marionhuebner.com">say-hi@marionhuebner.com</a></br><a href="tel:630-605-2962">630.605.2962</a></p>
-      <div class="icons">
+
+
+      <p class="layout-flex-child-3col"><a href="mailto:say-hi@marionhuebner.com">say-hi@marionhuebner.com</a>
+      <a href="tel:630-605-2962">630.605.2962</a></p>
+
+      <div class="icons layout-flex-child-4col layout-flex-parent">
         <a href="https://www.linkedin.com/in/marionhuebner" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
         <a href="https://github.com/rionner" target="_blank"><i class="fa fa-github-alt fa-2x"></i></a>
         <a href="https://twitter.com/rion_ner" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
         <a href="https://angel.co/marion-huebner" target="_blank"><i class="fa fa-angellist fa-2x"></i></a>
       </div>
-      <p>Available in Chicago, IL</br>and for remote work.</p>
-      <h5>mahalo</h5>
+
+      <p class="layout-flex-child-3col">Available in Chicago, IL</br>and for remote work.</p>
+
+      <h5 class="mahalo layout-flex-child-4col">mahalo</h5>
     </footer>
 
   </body>

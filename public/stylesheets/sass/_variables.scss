@@ -16,24 +16,28 @@ $size60: 60px;
 $white: rgb(255, 255, 255);
 $off-white: rgb(240, 240, 240);
 $grey: rgb(150, 150, 150);
+$black: rgb(0, 0, 0);
 $green: rgb(10, 230, 10);
+$teal: rgb(0, 160, 160);
 $red: rgb(245, 0, 0);
 $purple: rgb(185, 35, 175);
-$teal: rgb(0, 160, 160);
 
 /* BROWSER WIDTHS */
-$width300: 300px;
-$width500: 500px;
-$width700: 700px;
-$width900: 900px;
-$width1100: 1100px;
-$width1300: 1300px;
+$width3: 300px;
+$width5: 500px;
+$width7: 700px;
+$width9: 900px;
+$width11: 1100px;
+$width13: 1300px;
+
+
 
 
 /* TO USE IN SCSS */
 /* FONTS */
 $heading-font: $righteous-font;
-$bodycontent-font: montserrat-font;
+$bodycontent-font: $montserrat-font;
+$caption-font: $questrial-font;
 
 /* FONT SIZES */
 $ridiculous-heading-size: $size60;
@@ -44,15 +48,16 @@ $bodycontent-size: $size16;
 $caption-size: $size12;
 
 /* COLORS */
-$primary-color: $green;
+$primary-color: $black;
 $secondary-color: $grey;
-/*$tertiary-color: ;*/
+$tertiary-color: $white;
+$quaternary-color: $red;
 
 /* BROWSER WIDTHS */
-$mobile-min: $width300;
-$mobile-max: $width500;
-$tablet-min: $width700;
-$tablet-max: $width900;
-$desktop-min: $width1100;
-$desktop-max: $width1300;
+$mobile-min: $width3;
+$mobile-max: $width5;
+$tablet-min: $width7;
+$tablet-max: $width9;
+$desktop-min: $width11;
+$desktop-max: $width13;
 

@@ -1,16 +1,8 @@
-/* SASS VARIABLES */
-@import "variables";
-
 /* PORTFOLIO NAVIGATION */
 #portfolio-nav {
-  width: 100%;
   position: fixed;
   background-color: $white;
   border-bottom: solid 1px $grey;
-
-  a {
-    text-decoration: none;
-  }
 
   .portie-nav-list {
     text-align: center;
@@ -23,8 +15,6 @@
         padding: 9px 25px;
         list-style: none;
         text-align: center;
-        font-family: $font-3;
-        font-size: 15px;
         color: $green;
       }
 
@@ -39,12 +29,10 @@
 
 /* GENERAL DETAIL PAGE STYLES */
 main {
-  width: 100%;
   padding: 32px 0 100px;
 
   h1 {
     width: 100%;
-    font-size: 50px;
     color: $off-white;
   }
 
@@ -68,7 +56,6 @@ main {
       color: $grey;
 
       a {
-        text-decoration: none;
         color: $green;
       }
 

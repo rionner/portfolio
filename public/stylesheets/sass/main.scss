@@ -1,0 +1,36 @@
+/* SASS VARIABLES */
+@import "variables";
+
+/* BASE */
+/* STYLE RULES */
+/* Default styles - exclusively element selectors, descendant selectors, child selectors, and pseudo classes. */
+/* Do not style class or id selectors */
+@import "base";
+
+/* GENERAL STYLES */
+/* STYLE RULES */
+/* Elemental Styles */
+@import "general-styles";
+
+/* LAYOUT */
+/* STYLE RULES */
+/* Divide the page into sections & hold one or more modules together */
+/* Naming conventions > Prefix layout mixins with 'layout-' - as in '.layout-navbar' */
+@import "layout-styles";
+
+/* MODULE */
+/* STYLE RULES */
+/* Resusable, modular parts of design - callouts, sidebars, product lists, etc. */
+/* Naming conventions > Use the name of the module for module mixin names, or descriptive class names */
+@import "module-styles";
+
+/* STATE */
+/* STYLE RULES */
+/* Describe how modules or layouts will look when in a particular state - hidden, expanded, active, inactive, etc. */
+/* Naming conventions > Prefix state mixins with 'is-' - as in '.is-hidden' */
+@import "state-styles";
+
+/* THEME */
+/* STYLE RULES */
+/* Describe how modules or layouts might look - not necessarily required. */
+@import "theme-styles";

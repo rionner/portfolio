@@ -3,12 +3,10 @@
 
 /* SHAKE-IT-SPEARE STYLES */
 .shake-it {
-  width: 70%;
   margin: 0 auto 150px;
 
   #loading, #loaded {
     display: block;
-    width: 60%;
     margin: 0 auto;
     padding: 20px 0 0;
 
@@ -31,8 +29,6 @@
     border: 0;
     color: $off-white;
     background-color: $red;
-    font-family: $font-2;
-    font-size: 20px;
   }
 
   #rewrite:hover {

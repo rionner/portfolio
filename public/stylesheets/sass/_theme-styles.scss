@@ -1,0 +1,39 @@
+/* THEME */
+/* STYLE RULES */
+/* Describe how modules or layouts might look - not necessarily required. */
+
+
+.parent-border {
+  padding: 30px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.actionable {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+footer {
+  align-items: center;
+  text-align: center;
+  line-height: 30px;
+  background-color: $primary-color;
+  color: $tertiary-color;
+
+  a {
+    color: $tertiary-color;
+  }
+
+  .icons {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .mahalo {
+    background-color: $tertiary-color;
+    color: $primary-color;
+  }
+
+}
