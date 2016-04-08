@@ -27,11 +27,17 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 body {
   line-height: 1;
-  color: black;
-  background: white;
+  color: $primary-color;
+  background: $tertiary-color;
 }
 ol, ul {
   list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* TYPOGRAPHY */
@@ -69,7 +75,7 @@ h5 {
 h6 {
   font-size: $caption-size;
   text-transform: uppercase;
-  color: red;
+  color: $quaternary-color;
 }
 
 p, a, li, input, select, option, button {
@@ -92,11 +98,6 @@ a {
   }
 }
 
-img {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-}
 
 /* RESPONSIVE CONSIDERATIONS */
 /*@media screen and (min-width: $mobile-min) {}*/
