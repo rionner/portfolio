@@ -9,14 +9,12 @@ header, footer {
   width: 100%;
 }
 
-nav {
-  li {
-    text-align: center;
-  }
+nav>li {
+  text-align: center;
 }
 
 main {
-  margin: 0 5%;
+  margin: 80px 5% 0;
 }
 
 section {
@@ -33,9 +31,9 @@ footer {
 
 
 /* RESPONSIVE CONSIDERATIONS */
-@media screen and (min-width: $mobile-min) {}
-@media screen and (min-width: $mobile-max) {}
-@media screen and (min-width: $tablet-min) {}
-@media screen and (min-width: $tablet-max) {}
-@media screen and (min-width: $desktop-min) {}
-@media screen and (min-width: $desktop-max) {}
+/*@media screen and (min-width: $mobile-min) {}*/
+/*@media screen and (min-width: $mobile-max) {}*/
+/*@media screen and (min-width: $tablet-min) {}*/
+/*@media screen and (min-width: $tablet-max) {}*/
+/*@media screen and (min-width: $desktop-min) {}*/
+/*@media screen and (min-width: $desktop-max) {}*/

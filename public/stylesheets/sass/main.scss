@@ -22,13 +22,13 @@
 /* STYLE RULES */
 /* Resusable, modular parts of design - callouts, sidebars, product lists, etc. */
 /* Naming conventions > Use the name of the module for module mixin names, or descriptive class names */
-@import "module-styles";
+/*@import "module-styles";*/
 
 /* STATE */
 /* STYLE RULES */
 /* Describe how modules or layouts will look when in a particular state - hidden, expanded, active, inactive, etc. */
 /* Naming conventions > Prefix state mixins with 'is-' - as in '.is-hidden' */
-@import "state-styles";
+/*@import "state-styles";*/
 
 /* THEME */
 /* STYLE RULES */
