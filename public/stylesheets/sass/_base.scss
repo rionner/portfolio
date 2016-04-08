@@ -1,7 +1,7 @@
 /* BASE */
 /* STYLE RULES */
-/* Default styles - exclusively element selectors, descendant selectors, child selectors, and pseudo classes. */
-/* Do not style class or id selectors */
+/* Default styles - exclusively elements, descendants, children, and pseudo classes. */
+/* Do not style classes or ids */
 
 /* BROSWER RESETS */
 html, body, div, span, applet, object, iframe,
@@ -77,7 +77,9 @@ p, a, li, input, select, option, button {
   font-size: $bodycontent-size;
 }
 
-p {}
+p {
+  margin: 10px auto;
+}
 
 a {
   text-decoration: none;
@@ -90,4 +92,17 @@ a {
   }
 }
 
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE CONSIDERATIONS */
+@media screen and (min-width: $mobile-min) {}
+@media screen and (min-width: $mobile-max) {}
+@media screen and (min-width: $tablet-min) {}
+@media screen and (min-width: $tablet-max) {}
+@media screen and (min-width: $desktop-min) {}
+@media screen and (min-width: $desktop-max) {}
 

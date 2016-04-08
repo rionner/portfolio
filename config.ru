@@ -19,6 +19,7 @@ Dir.glob('./{controllers}/*.rb').each { |file| require file }
 
 # MAP CONTROLLERS
 map('/') { run ApplicationController }
+map('/portfolio') { run PortfolioController}
 map('/photography') { run PhotoController}
 
 run Sinatra::Application

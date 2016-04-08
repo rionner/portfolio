@@ -4,18 +4,6 @@
 /* Naming conventions > Prefix layout mixins with 'layout-' - as in '.layout-navbar' */
 
 
-/* Keep footer at the bottom of the page */
-.layout-page-wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.layout-content-wrap {
-  flex: 1 0 auto;
-}
-
-
 /* Flex grid styles */
 .layout-flex-parent {
   display: flex;
@@ -25,8 +13,8 @@
 }
 
 .layout-flex-child-1col {
-  width: 90%;
-  padding: 10px auto;
+  width: 100%;
+  padding: 5% auto;
 }
 
 .layout-flex-child-2col {
@@ -43,3 +31,45 @@
   width: 20%;
   padding: 10px 1%;
 }
+
+
+/* Nav alignment and secondary nav bar */
+.layout-nav {
+  @extend .layout-flex-parent;
+  position: fixed;
+  z-index: 1;
+  align-items: baseline;
+}
+
+.layout-secondary-nav {
+  position: fixed;
+  z-index: 2;
+  width: 30%;
+  margin-left: 70%;
+
+  a {
+    line-height: 32px;
+  }
+}
+
+
+/* Keep footer at the bottom of the page */
+.layout-page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.layout-content-wrap {
+  flex: 1 0 auto;
+}
+
+
+/* RESPONSIVE CONSIDERATIONS */
+@media screen and (min-width: $mobile-min) {}
+@media screen and (min-width: $mobile-max) {}
+@media screen and (min-width: $tablet-min) {}
+@media screen and (min-width: $tablet-max) {}
+@media screen and (min-width: $desktop-min) {}
+@media screen and (min-width: $desktop-max) {}
+

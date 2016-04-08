@@ -7,11 +7,6 @@ html {
 
 header, footer {
   width: 100%;
-  min-height: 120px;
-}
-
-header {
-  margin-bottom: 20px;
 }
 
 nav {
@@ -24,8 +19,23 @@ main {
   margin: 0 5%;
 }
 
+section {
+  margin: 30px auto;
+}
+
+article {}
+
 footer {
   margin-top: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 
+/* RESPONSIVE CONSIDERATIONS */
+@media screen and (min-width: $mobile-min) {}
+@media screen and (min-width: $mobile-max) {}
+@media screen and (min-width: $tablet-min) {}
+@media screen and (min-width: $tablet-max) {}
+@media screen and (min-width: $desktop-min) {}
+@media screen and (min-width: $desktop-max) {}

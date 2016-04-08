@@ -2,22 +2,54 @@
 /* STYLE RULES */
 /* Describe how modules or layouts might look - not necessarily required. */
 
+.emphasized {}
 
-.parent-border {
-  padding: 30px;
-  border: 1px solid;
-  border-radius: 10px;
+.block-quote {}
+
+.snippets {}
+
+.prettyprint {}
+
+.gif {}
+
+.img-fill {
+  position: relative;
+  z-index: -1;
+  background: center no-repeat;
+  background-size: cover;
 }
 
-.actionable {
-  padding: 10px;
-  border: 1px solid;
-  border-radius: 5px;
+.img-fill-title {
+  position: absolute;
+}
+
+.focal-image {
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  background: center no-repeat;
+  background-size: contain;
+}
+
+.gallery {}
+
+.gallery-item {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background: center no-repeat;
+  background-size: cover;
+}
+
+.triangle-topright {
+  width: 0;
+  height: 0;
+  float: right;
+  border-top: 30px solid $tertiary-color;
+  border-left: 30px solid transparent;
 }
 
 footer {
-  align-items: center;
-  text-align: center;
   line-height: 30px;
   background-color: $primary-color;
   color: $tertiary-color;
@@ -35,5 +67,13 @@ footer {
     background-color: $tertiary-color;
     color: $primary-color;
   }
-
 }
+
+/* RESPONSIVE CONSIDERATIONS */
+@media screen and (min-width: $mobile-min) {}
+@media screen and (min-width: $mobile-max) {}
+@media screen and (min-width: $tablet-min) {}
+@media screen and (min-width: $tablet-max) {}
+@media screen and (min-width: $desktop-min) {}
+@media screen and (min-width: $desktop-max) {}
+

@@ -2,3 +2,13 @@
 /* STYLE RULES */
 /* Describe how modules or layouts will look when in a particular state - hidden, expanded, active, inactive, etc. */
 /* Naming conventions > Prefix state mixins with 'is-' - as in '.is-hidden' */
+
+
+
+/* RESPONSIVE CONSIDERATIONS */
+@media screen and (min-width: $mobile-min) {}
+@media screen and (min-width: $mobile-max) {}
+@media screen and (min-width: $tablet-min) {}
+@media screen and (min-width: $tablet-max) {}
+@media screen and (min-width: $desktop-min) {}
+@media screen and (min-width: $desktop-max) {}

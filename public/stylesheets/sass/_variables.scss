@@ -1,4 +1,39 @@
-/* ALL VARIABLES */
+/* CHILD VARIABLES */
+/* TO USE IN SCSS */
+
+/* FONTS */
+$heading-font: $righteous-font;
+$bodycontent-font: $montserrat-font;
+$caption-font: $questrial-font;
+
+/* FONT SIZES */
+$ridiculous-heading-size: $size60;
+$super-heading-size: $size46;
+$large-heading-size: $size32;
+$heading-size: $size24;
+$bodycontent-size: $size16;
+$caption-size: $size12;
+
+/* COLORS */
+$primary-color: $black;
+$secondary-color: $grey;
+$tertiary-color: $white;
+$quaternary-color: $red;
+
+/* BROWSER WIDTHS */
+$mobile-min: $width3;
+$mobile-max: $width5;
+$tablet-min: $width7;
+$tablet-max: $width9;
+$desktop-min: $width11;
+$desktop-max: $width13;
+
+
+
+/* PARENT VARIABLES */
+/* DO NOT USE IN SCSS */
+/* USE AS CHILD VARIABLE ASSIGNMENT VALUES */
+
 /* FONTS */
 $righteous-font: 'Righteous', sans-serif;
 $montserrat-font: 'Montserrat', sans-serif;
@@ -29,35 +64,3 @@ $width7: 700px;
 $width9: 900px;
 $width11: 1100px;
 $width13: 1300px;
-
-
-
-
-/* TO USE IN SCSS */
-/* FONTS */
-$heading-font: $righteous-font;
-$bodycontent-font: $montserrat-font;
-$caption-font: $questrial-font;
-
-/* FONT SIZES */
-$ridiculous-heading-size: $size60;
-$super-heading-size: $size46;
-$large-heading-size: $size32;
-$heading-size: $size24;
-$bodycontent-size: $size16;
-$caption-size: $size12;
-
-/* COLORS */
-$primary-color: $black;
-$secondary-color: $grey;
-$tertiary-color: $white;
-$quaternary-color: $red;
-
-/* BROWSER WIDTHS */
-$mobile-min: $width3;
-$mobile-max: $width5;
-$tablet-min: $width7;
-$tablet-max: $width9;
-$desktop-min: $width11;
-$desktop-max: $width13;
-
