@@ -34,6 +34,12 @@ ol, ul {
   list-style: none;
 }
 
+li {
+  margin: 0 10px;
+  font-family: $caption-font, Helvetica, Arial, sans-serif;
+  font-size: $bodycontent-size;
+}
+
 img {
   display: block;
   width: 100%;
@@ -41,6 +47,16 @@ img {
 }
 
 /* TYPOGRAPHY */
+h1, h2, h3, h4, h5 {
+  margin-bottom: 10px;
+}
+
+a {
+  h1, h2, h3, h4, h5 {
+    margin-bottom: 0px;
+  }
+}
+
 h1, h2, h3 {
   font-family: $heading-font, Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -78,7 +94,7 @@ h6 {
   color: $quaternary-color;
 }
 
-p, a, li, input, select, option, button {
+p, a, input, select, option, button {
   font-family: $bodycontent-font, Helvetica, Arial, sans-serif;
   font-size: $bodycontent-size;
 }
@@ -88,16 +104,26 @@ p {
 }
 
 a {
+  transition: color 200ms ease;
   text-decoration: none;
   font-weight: 700;
   color: $primary-color;
 
   &:hover {
-    transition: color 0.2s ease;
     color: $quaternary-color;
   }
 }
 
+blockquote {
+  margin: 10px;
+  text-align: justify;
+  font-family: $caption-font, Helvetica, Arial, sans-serif;
+  font-size: $bodycontent-size;
+}
+
+figure {
+  margin: 0;
+}
 
 /* RESPONSIVE CONSIDERATIONS */
 /*@media screen and (min-width: $mobile-min) {}*/

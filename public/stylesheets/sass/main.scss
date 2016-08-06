@@ -1,3 +1,13 @@
+/* LINEA ICON FONTS */
+@import "fontface";
+@include fontFace('LineaArrow','public/vendor/linea_complete_1.0/_arrows');
+@include fontFace('LineaBasic','public/vendor/linea_complete_1.0/_basic');
+@include fontFace('LineaBasicElaboration','public/vendor/linea_complete_1.0/basic_elaboration');
+@include fontFace('LineaEcommerce','public/vendor/linea_complete_1.0/_ecommerce');
+@include fontFace('LineaMusic','public/vendor/linea_complete_1.0/_music');
+@include fontFace('LineaSoftware','public/vendor/linea_complete_1.0/_software');
+@include fontFace('LineaWeather','public/vendor/linea_complete_1.0/_weather');
+
 /* SASS VARIABLES */
 @import "variables";
 
@@ -28,7 +38,7 @@
 /* STYLE RULES */
 /* Describe how modules or layouts will look when in a particular state - hidden, expanded, active, inactive, etc. */
 /* Naming conventions > Prefix state mixins with 'is-' - as in '.is-hidden' */
-/*@import "state-styles";*/
+@import "state-styles";
 
 /* THEME */
 /* STYLE RULES */
