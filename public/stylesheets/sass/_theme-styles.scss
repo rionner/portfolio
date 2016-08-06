@@ -2,15 +2,94 @@
 /* STYLE RULES */
 /* Describe how modules or layouts might look - not necessarily required. */
 
-.emphasized {}
+.nav {
+  justify-content: flex-start;
+  width: 100%;
+  background-color: $tertiary-color;
+  border-bottom: 1px solid $primary-color;
+}
 
-.block-quote {}
+.nav-arrow {
+}
 
-.snippets {}
+.port-nav-list {
+  li {
+    transition: all 200ms ease;
+    padding: 0 10px;
+    width: 100px;
+    background-color: $tertiary-color;
+    border: {
+      left: 1px solid $primary-color;
+      bottom: 1px solid $primary-color;
+      }
+    &:hover {
+      padding: 5px 10px;
+      border: {
+        left: 1px solid $quaternary-color;
+        bottom: 1px solid $quaternary-color;
+      }
+    }
+  }
+}
 
-.prettyprint {}
+button {
+  &.expand-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    margin: 0;
+    width: 121px;
+    height: 47px;
+    border-top: none;
+  }
 
-.gif {}
+  figure {
+    img {
+      height: 45px;
+    }
+  }
+}
+
+.portie-item {
+  margin: 10px 0;
+  transition: border 200ms ease;
+  border-bottom: 3px solid $tertiary-color;
+
+  &:hover {
+    border-bottom: 3px solid $quaternary-color;
+  }
+}
+
+.right-align {
+  text-align: right;
+}
+
+.res-item {
+  margin: 0 30px;
+  padding-bottom: 10px;
+
+  h4 {
+    margin: 5px 0;
+  }
+
+  p, ul {
+    margin-left: 30px;
+  }
+}
+
+.bullet-list {
+  margin: 10px;
+  list-style: circle;
+}
+
+/*.emphasized {}*/
+
+/*.snippets {}*/
+
+/*.prettyprint {}*/
+
+/*.gif {}*/
 
 .img-fill {
   position: relative;
@@ -21,32 +100,31 @@
 
 .img-fill-title {
   position: absolute;
+  margin: 10px;
+  color: $tertiary-color;
 }
 
 .focal-image {
-  width: 100%;
-  z-index: -1;
   position: fixed;
+  z-index: 2;
+  width: 50%;
+  height: 50%;
+  margin: 0;
   background: center no-repeat;
   background-size: contain;
 }
 
-.gallery {}
-
 .gallery-item {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
+  width: 150px;
+  height: 150px;
   background: center no-repeat;
   background-size: cover;
 }
 
-.triangle-topright {
-  width: 0;
-  height: 0;
-  float: right;
-  border-top: 30px solid $tertiary-color;
-  border-left: 30px solid transparent;
+.shakeitspeare {
+  #rewrite, #loading, #loaded {
+    width: 300px;
+  }
 }
 
 footer {
@@ -64,7 +142,7 @@ footer {
   }
 
   .mahalo {
-    background-color: $tertiary-color;
+    background-color: $quaternary-color;
     color: $primary-color;
   }
 }
