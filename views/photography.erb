@@ -10,7 +10,7 @@
 <script type="text/javascript">
 
 	$(document).ready(function() {
-		var photos = <%= @photos.to_json %>
+		var photos = <%= @large_photos.to_json %>
 
 	  for (i in photos) {
 	  	$('.gallery').append('<article data-large="' + photos[i][0]['large'] + '" class="gallery-item" style="background-image: url(' + photos[i][0]['small'] + ')"></article>');
