@@ -15,6 +15,10 @@ class ApplicationController < Sinatra::Application
     erb :resume
   end
 
+  get '/map' do
+    erb :map
+  end
+
 end
 
 
