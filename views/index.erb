@@ -1,28 +1,38 @@
-<main>
-  <section>
-    <a href="/portfolio"><h2>Portfolio</h2></a>
-    <a href="/resume"><h2>Resume</h2></a>
-    <p>|&nbsp<a href="/map">map</a>&nbsp;|&nbsp;<a href="/resume">text</a>&nbsp;|</p>
-  </section>
-    <section class="focal-image"></section>
-</main>
+<div class="home-background"></div>
+  <!-- <div class="screen"> -->
+    <main>
+      <section>
+        <a href="/portfolio"><h2>Portfolio</h2></a>
+        <a href="/resume"><h2>Resume</h2></a>
+        <p>|&nbsp<a href="/map">map</a>&nbsp;|&nbsp;<a href="/resume">text</a>&nbsp;|</p>
+      </section>
+    </main>
+  <!-- </div> -->
 
 <script>
-  $(document).ready(function(){
+  $(document).ready(function() {
+    var largePhotos = <%= @large_photos.to_json %>
+    // var photoIndex = 0;
+    var shuffled;
+
     function shuffleArray(array) {
       for (var i = array.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var temp = array[i];
-          array[i] = array[j];
-          array[j] = temp;
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
       }
-      return array;
+      // shuffled = array;
+      setBackground(array);
+    }
+    function setBackground(shuffled) {
+      for(var i = 0; i <= shuffled.length; i++) {
+        $('.home-background').css("background-image", "url(" + shuffled[i] + ")");
+        if(i === shuffled.length--) { i = 0; }
+      }
     }
 
-    var largePhotos = <%= @large_photos.to_json %>
-
     shuffleArray(largePhotos);
-    console.log(largePhotos);
   });
 </script>
 

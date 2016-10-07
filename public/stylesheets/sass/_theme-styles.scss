@@ -87,11 +87,25 @@ button {
 
 /*.snippets {}*/
 
-.prettyprint {
-  font-family: Helvetica;
+/*.gif {}*/
+
+@keyframes opacity-animation {
+  0% { opacity: 0; }
+  30% { opacity: .7; }
+  70% { opacity: 0; }
 }
 
-/*.gif {}*/
+.home-background {
+  /*transition: background-image 5s linear;*/
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: center no-repeat;
+  background-size: cover;
+}
 
 .img-fill {
   position: relative;
