@@ -114,6 +114,13 @@ a {
   }
 }
 
+.inverted-links a {
+  color: $tertiary-color;
+  &:hover {
+    color: $quaternary-color;
+  }
+}
+
 blockquote {
   margin: 10px;
   text-align: justify;
