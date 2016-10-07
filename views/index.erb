@@ -12,7 +12,6 @@
 <script>
   $(document).ready(function() {
     var largePhotos = <%= @large_photos.to_json %>
-    // var photoIndex = 0;
     var shuffled;
 
     function shuffleArray(array) {
@@ -22,17 +21,16 @@
         array[i] = array[j];
         array[j] = temp;
       }
-      // shuffled = array;
-      setBackground(array);
+      return shuffled = array;
     }
-    function setBackground(shuffled) {
-      for(var i = 0; i <= shuffled.length; i++) {
-        $('.home-background').css("background-image", "url(" + shuffled[i] + ")");
-        if(i === shuffled.length--) { i = 0; }
+    function setBackground(array) {
+      for(var i = 0; i <= array.length; i++) {
+        $('.home-background').css("background-image", "url(" + array[i] + ")");
       }
     }
 
     shuffleArray(largePhotos);
+    setBackground(shuffled)
   });
 </script>
 
