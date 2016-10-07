@@ -1,17 +1,17 @@
-<div class="home-background"></div>
-  <!-- <div class="screen"> -->
-    <main>
-      <section>
-        <a href="/portfolio"><h2>Portfolio</h2></a>
-        <a href="/resume"><h2>Resume</h2></a>
-        <p>|&nbsp<a href="/map">map</a>&nbsp;|&nbsp;<a href="/resume">text</a>&nbsp;|</p>
-      </section>
-    </main>
-  <!-- </div> -->
+<div class="home-background-1"></div>
+<div class="home-background-2"></div>
+  <main>
+    <section>
+      <a href="/portfolio"><h2>Portfolio</h2></a>
+      <a href="/resume"><h2>Resume</h2></a>
+      <p>|&nbsp<a href="/map">map</a>&nbsp;|&nbsp;<a href="/resume">text</a>&nbsp;|</p>
+    </section>
+  </main>
 
 <script>
   $(document).ready(function() {
     var largePhotos = <%= @large_photos.to_json %>
+    var i = 0;
     var shuffled;
 
     function shuffleArray(array) {
@@ -24,13 +24,16 @@
       return shuffled = array;
     }
     function setBackground(array) {
-      for(var i = 0; i <= array.length; i++) {
-        $('.home-background').css("background-image", "url(" + array[i] + ")");
-      }
+      $('.home-background-1').css("background-image", "url(" + array[i] + ")");
+      // $('.home-background-2').css("opacity", "url(" + array[i++] + ")");
+      i++;
+      if(i === array.length) i = 0;
     }
 
     shuffleArray(largePhotos);
-    setBackground(shuffled)
+    setInterval(function(){
+      setBackground(shuffled);
+    }, 5000);
   });
 </script>
 
