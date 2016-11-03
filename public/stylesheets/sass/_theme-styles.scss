@@ -53,7 +53,8 @@ button {
 
 .portie-item {
   margin: 10px 0;
-  transition: border 200ms ease;
+  transition: border 400ms ease,
+              color 400ms ease;
   border-bottom: 3px solid $tertiary-color;
 
   &:hover {

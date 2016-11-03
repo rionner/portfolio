@@ -32,16 +32,22 @@
 }
 
 .layout-flex-child-3col {
-  width: 50%;
+  width: 100%;
   padding: 10px 1%;
+  @media screen and (min-width: $mobile-max) {
+    width: 40%;
+  }
   @media screen and (min-width: $tablet-max) {
     width: 30%;
   }
 }
 
 .layout-flex-child-4col {
-  width: 40%;
+  width: 100%;
   padding: 10px 1%;
+  @media screen and (min-width: $tablet-min) {
+    width: 30%;
+  }
   @media screen and (min-width: $tablet-max) {
     width: 20%;
   }
