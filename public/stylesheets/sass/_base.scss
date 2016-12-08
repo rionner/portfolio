@@ -94,7 +94,7 @@ h6 {
   color: $quaternary-color;
 }
 
-p, a, input, select, option, button {
+p, a, pre, input, select, option, button {
   font-family: $bodycontent-font, Helvetica, Arial, sans-serif;
   font-size: $bodycontent-size;
 }
@@ -109,6 +109,13 @@ a {
   font-weight: 700;
   color: $primary-color;
 
+  &:hover {
+    color: $quaternary-color;
+  }
+}
+
+.inverted-links a {
+  color: $tertiary-color;
   &:hover {
     color: $quaternary-color;
   }

@@ -14,6 +14,9 @@ Dotenv.load
 Sass::Plugin.options[:style] = :compressed
 use Sass::Plugin::Rack
 
+# REQUIRE HELPERS
+Dir.glob('./helpers/*.rb').each { |file| require file }
+
 # REQUIRE CONTROLLERS
 Dir.glob('./{controllers}/*.rb').each { |file| require file }
 

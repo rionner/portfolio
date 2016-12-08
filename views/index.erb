@@ -1,22 +1,40 @@
-<main>
-<!--   <article>
-    <h3>To be is to do.</h3>
-    <h6>Socrates</h6>
-    <h2>To do is to be.</h2>
-    <h6>Sartre</h6>
-    <h1>Do be do be do.</h1>
-    <h6>Sinatra</h6>
-  </article> -->
-
-  <section>
+<div class="home-background-1"></div>
+<div class="home-background-2"></div>
+  <main>
+    <section class="inverted-links">
       <a href="/portfolio"><h2>Portfolio</h2></a>
       <a href="/resume"><h2>Resume</h2></a>
-  </section>
-</main>
+      <p><a href="/map">|&nbspmap&nbsp;|</a><a href="/resume">|&nbsp;text&nbsp;|</a></p>
+    </section>
+  </main>
 
+<script>
+  $(document).ready(function() {
+    var largePhotos = <%= @large_photos.to_json %>
+    var i = 0;
+    var shuffled;
 
+    function shuffleArray(array) {
+      for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return shuffled = array;
+    }
+    function setBackground(array) {
+      $('.home-background-1').css("background-image", "url(" + array[i] + ")");
+      // $('.home-background-2').css("opacity", "url(" + array[i++] + ")");
+      i++;
+      if(i === array.length) i = 0;
+    }
 
-
-
+    shuffleArray(largePhotos);
+    setInterval(function(){
+      setBackground(shuffled);
+    }, 5000);
+  });
+</script>
 
 

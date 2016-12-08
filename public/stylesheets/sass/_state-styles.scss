@@ -7,6 +7,18 @@
   display: none;
 }
 
+
+/* General Mobile/Desktop States */
+.desktop { display: none; }
+
+.mobile { display: block; }
+
+@media screen and (min-width: $tablet-min) {
+  .desktop { display: block; }
+  .mobile { display: none }
+}
+
+
 /* RESPONSIVE CONSIDERATIONS */
 /*@media screen and (min-width: $mobile-min) {}*/
 /*@media screen and (min-width: $mobile-max) {}*/
