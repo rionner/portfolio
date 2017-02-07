@@ -9,8 +9,7 @@
   border-bottom: 1px solid $primary-color;
 }
 
-.nav-arrow {
-}
+.nav-arrow {}
 
 .port-nav-list {
   li {
@@ -82,6 +81,10 @@ button {
 .bullet-list {
   margin: 10px;
   list-style: circle;
+}
+
+pre.prettyprint {
+  overflow: scroll;
 }
 
 /*.emphasized {}*/
