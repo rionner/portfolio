@@ -7,15 +7,12 @@
 </main>
 
 <script>
-
-	$(document).ready(function() {
-		var photos = <%= @photos.to_json %>
-
-	  for (i in photos) {
-	  	$('.gallery').append('<div data-large="' + photos[i][0]['large'] + '" class="gallery-item" style="background-image: url(' + photos[i][0]['large'] + ')"></div>');
-	  }
-    console.log(photos);
-	});
-
+  $(document).ready(function() {
+    var photos = <%= @photos.to_json %>
+      for (i in photos) {
+        $('.gallery').append('<div data-large="' + photos[i][0]['large'] + '" class="gallery-item" style="background-image: url(' + photos[i][0]['large'] + ')"></div>');
+      }
+  });
 </script>
+
 
