@@ -1,0 +1,136 @@
+<%= erb(:_nav, :layout => true) %>
+<%= erb(:_port_nav, :layout => true) %>
+
+<main>
+  <h3>Style Guide Base</h3>
+  <h6>2017</h6>
+
+  <section>
+    <h4>The concept</h4>
+    <p>
+      Build a set of componentized styles intended to be a base for new project style guides.
+    </p>
+
+    <h4><a href="https://github.com/rionner/style-guide-base" target="blank">Project Repository</a> | <a href="https://style-guide-base.herokuapp.com/" target="blank">Live Site</a></h4>
+
+    <h4>Tech</h4>
+    <ul class="bullet-list">
+      <li>Node</li>
+      <li>Express</li>
+      <li>Gulp</li>
+      <li>HTML5</li>
+      <li>Sass</li>
+    </ul>
+  </section>
+
+  <section class="snippets">
+    <h4>Snippet</h4>
+    <pre class="prettyprint">
+
+  %button-base {
+    @include button-transition;
+    @include lato-font;
+    border-width: 1px;
+    border-style: solid;
+
+    &.-active, &.-valid, &.-inverse:hover {
+      color: $primary-color;
+      background-color: $primary-background;
+      border-color: $primary-color;
+    }
+    &.-active:hover, &.-valid:hover, &.-inverse {
+      color: $inverse-text;
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+    &.-action {
+      color: $inverse-text;
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+    &.-action:hover {
+      background-color: $link-hover;
+    }
+    &.-info {
+      color: $inverse-text;
+      background-color: $info-color;
+      border-color: transparent;
+    }
+    &.-info:hover {
+      color: $inverse-text;
+      background-color: $info-color;
+    }
+    &.-success {
+      color: $inverse-text;
+      background-color: $success-color;
+      border-color: $success-color;
+    }
+    &.-success:hover {
+      color: $success-color;
+      background-color: $primary-background;
+      border-color: $success-color;
+    }
+    &.-warning {
+      color: $inverse-text;
+      background-color: $warning-color;
+      border-color: $warning-color;
+    }
+    &.-warning:hover {
+      color: $warning-color;
+      background-color: $primary-background;
+      border-color: $warning-color;
+    }
+    &:invalid, &.-error {
+      color: $inverse-text;
+      background-color: $alert-color;
+      border-color: $alert-color;
+    }
+    &.-error:hover {
+      color: $alert-color;
+      background-color: $primary-background;
+      border-color: $alert-color;
+    }
+    &:disabled, &.-disabled {
+      color: $primary-color;
+      background-color: $disabled-color;
+      border-color: $disabled-color;
+    }
+  }
+
+  %primary-button {
+    @extend %button-base;
+    padding: 0 $base;
+    height: 38px;
+    font-size: 18px;
+    line-height: 38px;
+  }
+
+  %split-button {
+    @extend %button-base;
+    @include flexbox-row-parent;
+    flex-wrap: nowrap;
+    padding: 0;
+
+    >span {
+      padding: 0 $base;
+      height: 38px;
+      font-size: 18px;
+      line-height: 38px;
+    }
+    >span:first-of-type {
+      border-right: 1px solid $primary-background;
+    }
+  }
+
+  %small-button {
+    @extend %button-base;
+    padding: 0 $small;
+    height: 30px;
+    line-height: 30px;
+  }
+    </pre>
+    <p>
+      Defining base button styles and variations.
+    </p>
+  </section>
+</main>

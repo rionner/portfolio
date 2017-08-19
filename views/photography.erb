@@ -3,25 +3,16 @@
 
 <main>
   <h3>photography</h3>
-  <!-- <section class="focal-image"></section> -->
   <section class="gallery layout-flex-parent"></section>
 </main>
 
-<script type="text/javascript">
-
-	$(document).ready(function() {
-		var photos = <%= @large_photos.to_json %>
-
-	  for (i in photos) {
-	  	$('.gallery').append('<article data-large="' + photos[i][0]['large'] + '" class="gallery-item" style="background-image: url(' + photos[i][0]['small'] + ')"></article>');
-	  }
-
-  	// $('.gallery-item').mouseover(function() {
-  	// 	var large = $(this).data('large');
-   //    $('.focal-image').css('background-image', 'url(' + large + ')');
-  	// })
-
-	})
-
+<script>
+  $(document).ready(function() {
+    var photos = <%= @photos.to_json %>
+      for (i in photos) {
+        $('.gallery').append('<div data-large="' + photos[i][0]['large'] + '" class="gallery-item" style="background-image: url(' + photos[i][0]['large'] + ')"></div>');
+      }
+  });
 </script>
+
 
