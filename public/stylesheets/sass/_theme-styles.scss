@@ -169,6 +169,15 @@ pre.prettyprint {
   }
 }
 
+.map-background {
+  background-color: $quaternary-color;
+}
+#countries {
+  stroke-width: 1px;
+  stoke: $quaternary-color;
+  fill: $tertiary-color;
+}
+
 footer {
   line-height: 30px;
   background-color: $primary-color;

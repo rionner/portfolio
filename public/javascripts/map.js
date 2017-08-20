@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  // Find viewport size, set to feel
+  // Find viewport size
+
   var mapHeight = $(window).height() - $('footer').height();
   $('#map').height(mapHeight);
   var mapWidth = $('#map').width();
@@ -8,21 +9,16 @@ $(document).ready(function(){
   var height = mapHeight;
   var centered;
 
-  var projection = d3.geoStereographic();
-   // .translate([w/2, h/2])
-   // .scale([500]);
+  var projection = d3.geoMercator()
+    .scale([200]);
 
   var path = d3.geoPath()
     .projection(projection);
 
   var svg = d3.select("#map").append("svg")
     .attr("width", width)
-    .attr("height", height);
-
-  svg.append("rect")
-    .attr("class", "background")
-    .attr("width", width)
     .attr("height", height)
+    .attr("class", "map-background")
     .on("click", clicked);
 
   var g = svg.append("g");
@@ -33,15 +29,14 @@ $(document).ready(function(){
     g.append("g")
       .attr("id", "countries")
       .selectAll("path")
-      .data(geojson.feature(world, world.objects.countries).features)
+      .data(world.features)
       .enter().append("path")
       .attr("d", path)
       .on("click", clicked);
 
-    g.append("path")
-      .datum(geojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
-      .attr("id", "country-borders")
-      .attr("d", path);
+    // g.append("path")
+    //   .datum(world.mesh(world, world.features.properties, function(a, b) { return a !== b; }))
+    //   .attr("d", d3.geoPath);
   });
 
   function clicked(d) {
