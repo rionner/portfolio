@@ -1,6 +1,4 @@
 $(document).ready(function(){
-  // Find viewport size
-
   var mapHeight = $(window).height() - $('footer').height();
   $('#map').height(mapHeight);
   var mapWidth = $('#map').width();
